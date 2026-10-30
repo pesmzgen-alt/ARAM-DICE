@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070a18">
+  <title>ARAMA DICE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="top">
+    <div class="brand">
+      <img src="assets/arama-x-trade-logo.jpeg" alt="ARAM x TRADE logo">
+      <div><span class="eyebrow">COLOR DICE • SPIN CHAT</span><h1>ARAMA <b>DICE</b></h1><p>ROLL YOUR COLORS. MAKE YOUR MOVE.</p></div>
+    </div>
+    <nav><a href="#dice">Color Dice</a><a href="#signs">Sign Colors</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="tag">THE COLOR GAME</span>
+        <h2>LET THE DICE<br><span>DECIDE.</span></h2>
+        <p>Choose your dice, roll the colors, and use the signs to make your next trade move.</p>
+        <a class="hero-button" href="#dice">START ROLLING <span>↘</span></a>
+      </div>
+      <div class="hero-art"><img src="assets/arama-x-trade-logo.jpeg" alt="ARAM x TRADE character logo"></div>
+    </section>
+
+    <section class="panel dice-panel" id="dice">
+      <div class="section-heading"><div><span class="tag">01 / ROLL</span><h2>COLOR DICE</h2></div><span class="live-pill"><i></i> READY TO PLAY</span></div>
+      <div class="controls">
+        <label>NUMBER OF DICE
+          <select id="diceCount"><option value="1">1 DICE</option><option value="2">2 DICE</option><option value="3">3 DICE</option><option value="4" selected>4 DICE</option><option value="5">5 DICE</option><option value="6">6 DICE</option></select>
+        </label>
+        <label>DICE MODE
+          <select id="diceMode"><option value="color">COLOR DICE</option><option value="number">NUMBER DICE</option></select>
+        </label>
+      </div>
+      <div class="dice-area" id="diceArea" aria-live="polite"></div>
+      <button class="roll-button" id="rollButton"><span>🎲</span> ROLL AGAIN</button>
+      <p class="result" id="rollResult">Your colors will appear here.</p>
+      <div class="color-key"><span>AVAILABLE COLORS</span><b class="red">RED</b><b class="orange">ORANGE</b><b class="yellow">YELLOW</b><b class="green">GREEN</b><b class="blue">BLUE</b><b class="purple">PURPLE</b></div>
+    </section>
+
+    <section class="panel signs-panel" id="signs">
+      <div class="section-heading"><div><span class="tag">02 / SPIN CHAT</span><h2>SIGN COLORS</h2></div><span class="live-pill">TRADE MOVES</span></div>
+      <p class="section-intro">Pick a sign to reveal your move. You can also roll for a random sign.</p>
+      <div class="sign-layout">
+        <div class="sign-buttons" id="signButtons">
+          <button data-sign="Add More" class="sign blue-sign"><span>＋</span> ADD MORE</button>
+          <button data-sign="Deal?" class="sign yellow-sign"><span>🤝</span> DEAL?</button>
+          <button data-sign="L Trade" class="sign red-sign"><span>✕</span> L TRADE</button>
+          <button data-sign="Fair Trade" class="sign green-sign"><span>☑</span> FAIR TRADE</button>
+          <button data-sign="Last Offer" class="sign purple-sign"><span>▤</span> LAST OFFER</button>
+          <button data-sign="No Thanks" class="sign orange-sign"><span>😤</span> NO THANKS</button>
+        </div>
+        <div class="sign-preview">
+          <img src="assets/sign-colors.jpeg" alt="Sign Colors reference showing six trade actions">
+          <div class="chosen" id="chosenSign"><span>YOUR SIGN</span><strong>CHOOSE A MOVE</strong><small>Your selected sign appears here.</small></div>
+          <button class="random-sign" id="randomSign">✦ RANDOM SIGN</button>
+        </div>
+      </div>
+    </section>
+    <footer><strong>ARAMA DICE</strong><span>Made for the game • Have fun and trade fair</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
